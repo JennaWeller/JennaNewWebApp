@@ -1,14 +1,42 @@
 ﻿body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-
+    font-family: "Roboto",sans-serif; 
+    margin: 0;
+    padding:0;
+    padding-top: 10px; 
+    text-align: center;
+    border: 15px;
+  
+   
+}
+.button{
+    margin-left: 680px;
+    
 }
 label {
     font-size: 20px;
-    color: dodgerblue; 
-    width: 100px; 
-    display: inline-block; 
+    color: #1d5b64;
+    width: 100px;
+    display: flex;
+    flex-flow: column-reverse wrap;
+    margin-left: 680px;
+   
+}
+input {
+    display: flex;
+    margin-left: 660px;
+}
+ul{
+    display:inline;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px}
 }
 
-ul.quiz-props li {
+li{
     list-style-type: none;
 }
+
+.colorname {
+    color: #1d5b64
+}
+

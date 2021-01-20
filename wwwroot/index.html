@@ -1,42 +1,62 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+<head runat="server">
     <meta charset="utf-8" />
-    <title> Prof. Ganderson Fan Site</title>
-   
+    <title> Jenna Weller's Website</title>
+    <!--links to css stylesheet, favicon, and google fonts-->
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> Prof. Ganderson Fan site</h1>
+    <h1 class="colorname">Jenna Weller </h1>
+    <!--images of what I enjoy doing-->
     <img src="../img/bikephoto.jpg" />
-    <p> Jenna Weller is a junior studying information systems at BYU.</p>
-    <br />
-    <p> Pop Quiz: We love him because?</p>
-    <ul class="quiz-props">
-        <li> A: the luscious locks he had when he was growing up</li>
-        <li> B: he can pound a pound of bacon like it aint no thang</li>
-        <li> C:that million dollar smile.</li>
-        <li>D: He looks out and cares for everyone around him</li>
-        <li> E: All of the above</li>
+    <img src="../img/egypt.jpg" />
+    <img src="../img/egypt2.jpg" />
+    <!-- paragraph of expectations/hopes for 413 course-->
+    <p class="center">
+        My main goal this semester in 413 is to stay motivated and on top of my assignments. I would love to incorporate
+        practicing the course material for a solid few hours of each day so that my skills in this course can grow and
+        I won't be frantically studying for exams at the last minute  :) Those are kind of basic/vague hopes, but they're my
+        main hopes and expectations!
+    </p>
+    <!-- list of jobs I would like to have after graduating-->
+    <p> Top 3 jobs I would enjoy after graduation:</p>
+    <ul>
+        <li> Software Developer </li>
+        <li> Cyber Risk Consultant </li>
+        <li> Data Analyst</li>
     </ul>
-    <h2> Fan Mail</h2>
+    <!-- a form for user to input the grades they received for each section which will be used to calculate their overall grade-->
+    <h2 class="colorname"> Grade Calculator </h2>
     <form>
-        <label> From: </label>
-        <input id="from" />
+        <label> Student </label>
+        <input id="studentName" />
         <br />
-        <label> Email: </label>
-        <input id="email" />
+        <label> Assignments </label>
+        <input id="assignments" />
         <br />
-        <label> Subject: </label>
-        <input id="subject" />
+        <label> Group Project </label>
+        <input id="groupProject" />
         <br />
-        <label> Message: </label>
-        <textarea id="message" rows="5">  </textarea>
+        <label> Quizzes </label>
+        <input id="quizzes" />
+        <br />
+        <label> Exams </label>
+        <input id="exams" />
+        <br />
+        <label> Intex </label>
+        <input id="intex" />
+
         <br />
         <br />
-        <input id="submitButton" type="submit" value="Send Message" />
+        <!-- button that submits the form... on-click the javascript function to calculate the grade will be run-->
+        <input class="button" id="calculategrade" type="submit" value="Calculate Grade" />
 
     </form>
+    <!--script tag linking in the javascript file-->
     <script src="../js/JavaScript.js"></script>
 </body>
 </html>
