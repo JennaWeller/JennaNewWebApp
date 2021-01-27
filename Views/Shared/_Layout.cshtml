@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <!-- using the viewbag.title to set the title with whatever value fills it on the specifc page-->
+    <title> @ViewBag.Title</title>
+    <!--links to css stylesheet, favicon, and google fonts-->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!--this layout.html acts as a template for the other pages/ what they all have in common-->
+        <h1 class="colorname">@ViewBag.Header </h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index"> Home </a></li>
+                <li><a asp-controller="Home" asp-action="GradeCalculator"> Grade Calculator </a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <!-- renderbody calls the body tag of the other unique pages -->
+    @RenderBody()
+    <footer> Jenna's Website footer</footer>
+
+    <!-- linking the node modules -->
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/JavaScript.js"></script>
+
+</body>
+</html>

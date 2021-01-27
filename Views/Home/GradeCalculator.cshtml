@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //
+    ViewBag.Header = "Jenna's Grade Calculation Website";
+    ViewBag.Title = "Jenna's Grade Calculation Website";
+
+}
+@model JennaNewWebApp.Models.GradeCalculatorModel
+<body>
+    <!-- a form for user to input the grades they received for each section which will be used to calculate their overall grade-->
+    <form id="myform" method="post">
+        <label> Student </label>
+        <input id="studentName" asp-for="studentName" />
+        <br />
+        <label> Assignments </label>
+        <!-- the range 'validator' for numbers from 0-100 only-->
+        <input type="number" id="assignments" asp-for="assignments" placeholder="0-100" />
+        <br />
+        <label> Group Project </label>
+        <!--instead of the name tag we are using the asp-for= -->
+        <input type="number" id="groupProject" asp-for="groupProject" placeholder="0-100" />
+        <br />
+        <label> Quizzes </label>
+        <input type="number" id="quizzes" asp-for="quizzes" placeholder="0-100" />
+        <br />
+        <label> Exams </label>
+        <input type="number" id="exams" asp-for="exams" placeholder="0-100" />
+        <br />
+        <label> Intex </label>
+        <input type="number" id="intex" asp-for="intex" placeholder="0-100" />
+        <br />
+        <br />
+        <!-- button that submits the form... on-click the javascript function to calculate the grade will be run-->
+        <input type="submit" id="submitButton" value="Calculate Grade" placeholder="0-100" />
+        <div asp-validation-summary="All"></div>
+    </form>
+</body>
