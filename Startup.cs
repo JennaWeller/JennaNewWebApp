@@ -35,7 +35,7 @@ namespace JennaNewWebApp
             app.UseStaticFiles();
             app.UseRouting();
             app.UseEndpoints(cfg =>
-            {
+            {   //this allows us to specify the endpoints. after default that is the pattern, if that isnt found then we follow what the new etc says
                 cfg.MapControllerRoute("Default", "{controller}/{action}/{id?}",
                     new { controller = "Home", action = "Index" });
             });
